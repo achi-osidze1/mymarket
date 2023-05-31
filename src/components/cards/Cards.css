@@ -1,0 +1,29 @@
+.card{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+img:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 480px) {
+    .card{
+        max-width: 43%;
+        font-size: small;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px){
+    .card{
+        max-width: 30%;
+        font-size: small;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    .card{
+        max-width: 30%;
+    }
+}

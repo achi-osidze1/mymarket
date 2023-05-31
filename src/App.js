@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import Auth from "./components/auth/Auth"
+import Products from "./components/products/Products";
+import Error from "./components/error/Error"
+ 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  return (  
+    <><BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Auth}/>
+        <Route exact path='/products' component={Products}/>
+        <Route exact path="*" component={Error}/>
+      </Switch>
+    </BrowserRouter><>
+    
+    <style>{'body { background-color: #f1f3f6; }'}</style></></>
+);
 }
+
+
 
 export default App;
